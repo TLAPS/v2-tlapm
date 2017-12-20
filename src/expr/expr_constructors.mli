@@ -106,11 +106,13 @@ module Constr : sig
     val subst_in : subst_in -> expr
     val fp_subst_in : fp_subst_in -> expr
     val binder : binder -> expr
+    val level_of : expr -> level option
   end
 
   module EO : sig
     val expr   : expr -> expr_or_op_arg
     val op_arg : op_arg -> expr_or_op_arg
+    val level_of : expr_or_op_arg -> level option
   end
 
 end

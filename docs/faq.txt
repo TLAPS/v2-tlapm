@@ -169,6 +169,12 @@ This leads to four obligations:
 4: ASSUME A,B,C PROVE G
 
 
+Q: Given a module Foo:
+
+---- MODULE Foo ----
+
+
+
 ========================== Unsolved ========================
 
 Q: Why does Zenon export report a bug when called with a list of zero bullet

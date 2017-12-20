@@ -120,6 +120,13 @@ let lmax = function
   | TemporalLevel ->
     (function _ -> TemporalLevel)
 
+let olmax = function
+  | Some x -> ( function
+      | Some y -> lmax x y |> CCOpt.return
+      | None -> x |> CCOpt.return
+    )
+  | None -> (fun x -> x)
+
 let level_of_op_decl_kind = function
   | ConstantDecl -> Ok ConstantLevel
   | VariableDecl -> Ok StateLevel

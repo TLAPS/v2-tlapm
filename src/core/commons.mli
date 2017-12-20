@@ -71,5 +71,6 @@ val fmt_prover : formatter -> prover -> unit
 val format_op_decl_kind : op_decl_kind -> string
 
 val lmax : level -> level -> level
+val olmax : level option -> level option -> level option
 
 val level_of_op_decl_kind : op_decl_kind -> (level, string) Result.result

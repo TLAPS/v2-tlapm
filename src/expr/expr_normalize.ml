@@ -311,7 +311,7 @@ let node_type =
 
    * substitute formal param w/o args
    * substitute formal param with args
-   
+
    * distribute over leibniz application
 
    * unfold definitions
@@ -483,7 +483,6 @@ class ['a] normalize_explicit_substs = object(self)
       self#operator_op_subst acc from_module op_subst rest_chain op
     | (FP_subst fp_subst) :: rest_chain ->
       self#operator_fp_subst acc fp_subst rest_chain op
-
 
   method private operator_fp_subst acc fp_subst rest_chain =
     let { term_db; current_chain; _ } = acc in

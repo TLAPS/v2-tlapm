@@ -116,6 +116,10 @@ module Constr = struct
   module EO = struct
     let expr  x = EO_expr x
     let op_arg x = EO_op_arg x
+
+    let level_of x = function
+      | EO_expr x -> E.level_of x
+      | EO_op_arg {level; _ } -> level
   end
 
   let numeral ~location:location value =

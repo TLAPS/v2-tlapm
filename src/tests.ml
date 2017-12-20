@@ -84,6 +84,7 @@ let () =
       Test_extract_obligations.get_tests results;
       Test_formatter.get_tests results;
       Test_substitution.get_tests;
+      Test_expr_normalize.get_tests;
       Test_simple_expr.get_tests results;
       Test_nunchaku.get_tests results;
       Test_issue2.get_tests results;
